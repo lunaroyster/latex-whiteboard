@@ -5,6 +5,31 @@ body {
   margin: 2em;
   color: #333;
 }
+a {
+  color: #006363;
+  text-decoration: unset;
+  transition: 0.1s;
+}
+a:hover {
+  background: #00636318;
+}
+code {
+  background: #f8f3f3;
+  padding: 2px;
+  border-radius: 4px;
+  color: #a13f00;
+}
+pre code {
+  background: unset;
+  color: unset;
+  padding: unset;
+  border-radius: unset;
+}
+pre {
+  background: #f8f8f8;
+  padding: 1em;
+  border-radius: 8px;
+}
 @media screen and (min-width: 1024px) {
   body {
     max-width: 800px;
