@@ -1,0 +1,44 @@
+<script src="script.js"></script>
+
+# Estimating complexity of divide and conquer algorithms
+
+Imagine an algorithm $T$ defined in terms of itself:
+
+$$T(n) = aT\left(\frac{n}{b}\right) + \Theta(n^c)$$
+
+Here, $T(n)$ is computed by solving $a$ problems of size $T\left(\frac{n}{b}\right)$ and 'combining' them with a step that has a cost with the order of magnitude $n^c$
+
+An example of this is **quicksort**. Quicksort splits its input into two halves (ideally) around a pivot, and recurses on these sublists. It then merges the two sublists with a $\Theta(n)$ algorithm.
+
+$$Q(n) = 2Q\left(\frac{n}{2}\right) + n$$
+
+Many divide and conquer algorithms fall into this pattern: $a$ subproblems of size $n/b$, with a polynomial 'combine' step. 
+
+The complexity factor of subproblems can be represented as 
+
+$$\log{(\text{Number of subproblems})}/\log{(\text{Relative subproblem size})}$$
+
+or using the constants $a$, and $b$:
+
+$$\log{(a)}/\log{(b)} = \log_{b}{a}$$
+
+The complexity of divide and conquer algorithms then depends on the aspect that tends to dominate.
+
+- Do the subproblems dominate? ($n^{\log_{b}{a}} > n^c$)
+- Does the recombination dominate? ($n^{\log_{b}{a}} < n^c$)
+- Are they comparable? ($\log_{b}{a} = c$)
+
+
+
+$$
+  T(n) =
+  \begin{cases}
+    \Theta{\left(n^{\log_{b}{a}}\right)} & \text{ if subproblems dominate}, \\
+    \Theta{\left(n^{c}\right)} & \text{ if recombination dominates}, \\
+    \Theta{\left(n^{c}\log(n)\right)} & \text{ if they are comparable }, \\
+  \end{cases}
+$$
+
+Let's apply this to our Quicksort example. There are 2 subproblems of half the size. That gives us a subproblem factor of $\log_{2}{2} = 1$. The aplitting/recombination step is $\Theta(n^1)$. Via the method above, we arrive at 
+
+$$Q(n) = \Theta{\left(n^{\log_{2}{2}}\log(n)\right)} = \Theta(n\log{n})$$
