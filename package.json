@@ -1,11 +1,17 @@
 {
   "name": "latex-whiteboard",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Easy-to-distribute LaTeX + Markdown whiteboard",
-  "main": "main.js",
+  "main": "main.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "npx rollup main.js --file main.min.js --format iife",
+    "publish": "npm publish ."
   },
+  "files": [
+    "main.min.js",
+    "LICENSE.md"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lunaroyster/latex-whiteboard.git"
