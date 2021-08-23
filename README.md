@@ -1,10 +1,10 @@
-<script src="script.js"></script>
-
 # LaTeX Whiteboard
 
 A tool for creating markdown-enabled LaTeX boards that are easy to share and update live.
 
-Here's an [example](example.html)
+Here's an [example](https://latex-whiteboard.arnavbansal.repl.co/example.html) with LaTeX
+
+![](latexboard.gif)
 
 ## Quick start
 
