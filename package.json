@@ -1,0 +1,24 @@
+{
+  "name": "latex-whiteboard",
+  "version": "0.0.1",
+  "description": "Easy-to-distribute LaTeX + Markdown whiteboard",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lunaroyster/latex-whiteboard.git"
+  },
+  "keywords": [
+    "latex",
+    "markdown",
+    "whiteboard"
+  ],
+  "author": "lunaroyster",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lunaroyster/latex-whiteboard/issues"
+  },
+  "homepage": "https://github.com/lunaroyster/latex-whiteboard#readme"
+}
